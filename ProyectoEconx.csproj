@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AED7ED0B-C888-4627-A06D-6F0E14D01A39}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProyectoEconx</RootNamespace>
+    <AssemblyName>ProyectoEconx</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>packages\Portable.BouncyCastle.1.8.5\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.barcodes, Version=7.1.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext7.7.1.13\lib\net40\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms, Version=7.1.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext7.7.1.13\lib\net40\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io, Version=7.1.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext7.7.1.13\lib\net40\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel, Version=7.1.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext7.7.1.13\lib\net40\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout, Version=7.1.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext7.7.1.13\lib\net40\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa, Version=7.1.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext7.7.1.13\lib\net40\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign, Version=7.1.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext7.7.1.13\lib\net40\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser, Version=7.1.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext7.7.1.13\lib\net40\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg, Version=7.1.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext7.7.1.13\lib\net40\itext.svg.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\Boleta\C_Boleta.cs" />
+    <Compile Include="Controlador\CategoriaProd\C_CategoriaP.cs" />
+    <Compile Include="Controlador\Intermedia\C_Intermedia.cs" />
+    <Compile Include="Controlador\Login\C_Login.cs" />
+    <Compile Include="Controlador\Menu\C_Menu.cs" />
+    <Compile Include="Controlador\Producto\C_Producto.cs" />
+    <Compile Include="Controlador\Proveedor\C_Proveedor.cs" />
+    <Compile Include="Controlador\Roles\C_Roles.cs" />
+    <Compile Include="Controlador\Usuarios\C_Usuario.cs" />
+    <Compile Include="Modelo\Boleta\M_Boleta.cs" />
+    <Compile Include="Modelo\Boleta\M_MBoleta.cs" />
+    <Compile Include="Modelo\CategoriaProd\M_CategoriaProd.cs" />
+    <Compile Include="Modelo\Intermedia\M_ComboProveedor.cs" />
+    <Compile Include="Modelo\Intermedia\M_Intermedia.cs" />
+    <Compile Include="Modelo\Intermedia\M_MIntermedia.cs" />
+    <Compile Include="Modelo\Login\M_Login.cs" />
+    <Compile Include="Modelo\Producto\M_ComboCategoria.cs" />
+    <Compile Include="Modelo\Producto\M_MProducto.cs" />
+    <Compile Include="Modelo\Producto\M_Producto.cs" />
+    <Compile Include="Modelo\Proveedor\M_Proveedor.cs" />
+    <Compile Include="Modelo\Roles\M_Roles.cs" />
+    <Compile Include="Modelo\Usuario\M_MUsuario.cs" />
+    <Compile Include="Modelo\Usuario\M_Usuario.cs" />
+    <Compile Include="SQL\CategoriaProd\S_CategoriaP.cs" />
+    <Compile Include="SQL\Intermedia\S_Intermedia.cs" />
+    <Compile Include="SQL\Menu\S_Menu.cs" />
+    <Compile Include="SQL\Producto\S_Producto.cs" />
+    <Compile Include="SQL\Proveedor\S_Proveedor.cs" />
+    <Compile Include="SQL\Roles\S_Roles.cs" />
+    <Compile Include="SQL\Boleta\S_Boleta.cs" />
+    <Compile Include="SQL\Usuarios\S_Usuarios.cs" />
+    <Compile Include="Vista\Boleta\V_ActualizarBoleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Boleta\V_ActualizarBoleta.Designer.cs">
+      <DependentUpon>V_ActualizarBoleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Boleta\V_AgregarBoleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Boleta\V_AgregarBoleta.Designer.cs">
+      <DependentUpon>V_AgregarBoleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Boleta\V_Boleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Boleta\V_Boleta.designer.cs">
+      <DependentUpon>V_Boleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Boleta\V_RealizarBoleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Boleta\V_RealizarBoleta.Designer.cs">
+      <DependentUpon>V_RealizarBoleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Boleta\V_Todo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Boleta\V_Todo.Designer.cs">
+      <DependentUpon>V_Todo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\CategoriaPro\V_CategoriaPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CategoriaPro\V_CategoriaPro.designer.cs">
+      <DependentUpon>V_CategoriaPro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Intermedia\V_Intermedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Intermedia\V_Intermedia.designer.cs">
+      <DependentUpon>V_Intermedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Menu\V_PanelMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Menu\V_PanelMenu.Designer.cs">
+      <DependentUpon>V_PanelMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Producto\V_ActualizarProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Producto\V_ActualizarProd.Designer.cs">
+      <DependentUpon>V_ActualizarProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Producto\V_AgregarProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Producto\V_AgregarProd.Designer.cs">
+      <DependentUpon>V_AgregarProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Producto\V_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Producto\V_Producto.designer.cs">
+      <DependentUpon>V_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Proveedor\V_ActualizarProve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Proveedor\V_ActualizarProve.Designer.cs">
+      <DependentUpon>V_ActualizarProve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Proveedor\V_AgregarProve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Proveedor\V_AgregarProve.Designer.cs">
+      <DependentUpon>V_AgregarProve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Proveedor\V_Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Proveedor\V_Proveedor.designer.cs">
+      <DependentUpon>V_Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Roles\V_Roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Roles\V_Roles.Designer.cs">
+      <DependentUpon>V_Roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Usuario\V_ActualizarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Usuario\V_ActualizarUsuario.Designer.cs">
+      <DependentUpon>V_ActualizarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Usuario\V_AgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Usuario\V_AgregarUsuario.Designer.cs">
+      <DependentUpon>V_AgregarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Usuario\V_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Usuario\V_Usuario.Designer.cs">
+      <DependentUpon>V_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQL\Login\S_Login.cs" />
+    <Compile Include="SQL\S_Conexion.cs" />
+    <Compile Include="Vista\Menu\V_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Menu\V_Menu.Designer.cs">
+      <DependentUpon>V_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\V_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\V_Login.Designer.cs">
+      <DependentUpon>V_Login.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vista\Boleta\V_ActualizarBoleta.resx">
+      <DependentUpon>V_ActualizarBoleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Boleta\V_AgregarBoleta.resx">
+      <DependentUpon>V_AgregarBoleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Boleta\V_Boleta.resx">
+      <DependentUpon>V_Boleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Boleta\V_RealizarBoleta.resx">
+      <DependentUpon>V_RealizarBoleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Boleta\V_Todo.resx">
+      <DependentUpon>V_Todo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CategoriaPro\V_CategoriaPro.resx">
+      <DependentUpon>V_CategoriaPro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Intermedia\V_Intermedia.resx">
+      <DependentUpon>V_Intermedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Menu\V_PanelMenu.resx">
+      <DependentUpon>V_PanelMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Producto\V_ActualizarProd.resx">
+      <DependentUpon>V_ActualizarProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Producto\V_AgregarProd.resx">
+      <DependentUpon>V_AgregarProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Producto\V_Producto.resx">
+      <DependentUpon>V_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proveedor\V_ActualizarProve.resx">
+      <DependentUpon>V_ActualizarProve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proveedor\V_AgregarProve.resx">
+      <DependentUpon>V_AgregarProve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proveedor\V_Proveedor.resx">
+      <DependentUpon>V_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Roles\V_Roles.resx">
+      <DependentUpon>V_Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Usuario\V_ActualizarUsuario.resx">
+      <DependentUpon>V_ActualizarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Usuario\V_AgregarUsuario.resx">
+      <DependentUpon>V_AgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Usuario\V_Usuario.resx">
+      <DependentUpon>V_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vista\Menu\V_Menu.resx">
+      <DependentUpon>V_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\V_Login.resx">
+      <DependentUpon>V_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ProyectoEconx.Modelo.Boleta.M_MBoleta.datasource" />
+    <None Include="Properties\DataSources\ProyectoEconx.Modelo.CategoriaProd.M_CategoriaProd.datasource" />
+    <None Include="Properties\DataSources\ProyectoEconx.Modelo.Intermedia.M_MIntermedia.datasource" />
+    <None Include="Properties\DataSources\ProyectoEconx.Modelo.Producto.M_MProducto.datasource" />
+    <None Include="Properties\DataSources\ProyectoEconx.Modelo.Proveedor.M_Proveedor.datasource" />
+    <None Include="Properties\DataSources\ProyectoEconx.Modelo.Roles.M_Roles.datasource" />
+    <None Include="Properties\DataSources\ProyectoEconx.Modelo.Usuario.M_MUsuario.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnLoginP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paisaje.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
